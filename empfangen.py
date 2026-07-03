@@ -27,7 +27,7 @@ topic = config["MQTT"]["topic"]
 tls = config.getboolean("MQTT", "tls")
 
 
-def verbunden(client, userdata, flags, reason_code, properties):
+def verbunden(client: mqtt.Client, userdata, flags, reason_code, properties):
     if reason_code == 0:
         print("Mit MQTT-Broker verbunden.")
         print("Warte auf Nachrichten für:")
